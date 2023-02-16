@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:14.1
+    container_name: postgres-money    
+    volumes:
+      - ./data/db:/var/lib/postgresql/data    
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=changeme
+
+  django:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: django:4.0.7
+    container_name: django-money
+    # command: python manage.py runserver 0.0.0.0:8000
+
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    restart: on-failure
