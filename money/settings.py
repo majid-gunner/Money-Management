@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%mg(9($s-w9c_fhg0kn$50e3@5-qszo3(-szo4$za_m85x$c2!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'money_api'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +124,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Added by me
+AUTH_USER_MODEL = 'money_api.UserProfile'
