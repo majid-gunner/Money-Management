@@ -28,16 +28,14 @@ class HelloApiView(APIView):
         serializer = self.serializer_class(data=request.data)
         print ("\n\n", request.data,"\n\n")
 
-        if serializer.is_valid():
-            firs_name = serializer.validated_data.get('first_name')
-            last_name = serializer.validated_data.get('last_name')
-
-            name = firs_name + last_name
+        serializer.is_valid()
+        serializer.save()
             
-            return Response({'message':name})
+        return Response({'message':serializer.data})
         
-        else:
-            return Response(
-                serializer.errors,
-                status=status.HTTP_400_BAD_REQUEST
-            )
+        # else:
+        #     return Response(
+        #         serializer.errors,
+        #         status=status.HTTP_400_BAD_REQUEST
+        #     )
+
