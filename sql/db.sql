@@ -78,7 +78,7 @@ CREATE TABLE income_subset (
 
 CREATE TABLE cost_transaction (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    cost_date DATE NOT NULL,
+    cost_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     price INT NOT NULL,
     _account_id INT NOT NULL,
     _cost_subset_id INT NOT NULL,
@@ -86,7 +86,7 @@ CREATE TABLE cost_transaction (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME ON UPDATE CURRENT_TIMESTAMP,
     soft_deleted_at DATETIME,
-    hard_deleted_at DATETIME
+    hard_deleted_at DATETIME,
 
     FOREIGN KEY (_account_id) REFERENCES account(id),
     FOREIGN KEY (_cost_subset_id) REFERENCES cost_subset(id)
@@ -95,7 +95,7 @@ CREATE TABLE cost_transaction (
 
 CREATE TABLE income_transaction (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    income_date DATE NOT NULL,
+    income_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     price INT NOT NULL,
     _account_id INT NOT NULL,
     _income_subset_id INT NOT NULL,
@@ -108,6 +108,3 @@ CREATE TABLE income_transaction (
     FOREIGN KEY (_account_id) REFERENCES account(id),
     FOREIGN KEY (_income_subset_id) REFERENCES income_subset(id)
 );
-
-INSERT INTO cost(title)
-VALUE ();
