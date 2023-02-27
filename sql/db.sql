@@ -59,7 +59,7 @@ CREATE TABLE cost_subset (
     id INT PRIMARY KEY AUTO_INCREMENT,
     _cost_id INT NOT NULL,
     title VARCHAR(25) NOT NULL,
-    sum_of_output INT NOT NULL,
+    sum_of_output INT NOT NULL DEFAULT 0,
 
     FOREIGN KEY (_cost_id) REFERENCES cost(id)
 ); 
@@ -108,3 +108,6 @@ CREATE TABLE income_transaction (
     FOREIGN KEY (_account_id) REFERENCES account(id),
     FOREIGN KEY (_income_subset_id) REFERENCES income_subset(id)
 );
+
+INSERT INTO cost(title)
+VALUE ();
