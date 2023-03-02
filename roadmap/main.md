@@ -14,8 +14,8 @@
   - [x] Table Keys, Indeces
 - Links
   - [DB Schema](https://lucid.app/lucidchart/invitations/accept/inv_2d7b86ff-b39e-4ed2-bda8-2592cd913855)
-  - [ ] [SQL Queries](link to githib / sample link: github.com/username/repo/resources/my-sql-queries.sql)
-- Articles
+  - [ ] SQL Queries (link to github/repo/sql)
+- Articles 
   - [x] [Keys](https://vrgl.ir/ML2Zt)
   - [x] [Hash](https://vrgl.ir/uKEzm)
   - [x] [Index](https://vrgl.ir/vVDXM)
@@ -24,8 +24,8 @@
 ---
 
 ## Docker
-  - [ ] [DocerFile] (link to githib / sample link: github.com/username/repo/file.txt)
-  - [ ] [DockerCompose] (link to githib / sample link: github.com/username/repo/file.txt)
+  - [ ] DocerFile(link to github/repo/Dockerfile)
+  - [ ] DockerCompose(link to github/repo/docker-compose.yml)
   - [x] Connect to container then create and using tables 
 
   - [ ] Articles
@@ -37,37 +37,28 @@
 
 ## API
 
-### API Design
+## API Design
 
-- [ ] API Design
-  - [Sequence Diagram](link)
-  - [ ] Create Album --> POST /api/albums {headers} {body}
-  - [ ] Get Artist   --> GET /api/artist/:artist_id
+- API Design
+  - [ ] Sequence Diagram
+  - [ ] API Call
   - [ ] https://sequencediagram.org/
 
 
-### API Principles
+## API Principles
 - Articles
   - [x] [API](https://vrgl.ir/sbeRs)
   - [x] [REST FUL API](https://virgool.io/@majidpv/rest-api-and-restful-api-tr8qkw23huwz)
-  - [ ] REST Methods
-  - [ ] SOAP, XML, JSON
-  - [ ] URL Arguments
+  - [ ] SOAP, XML, JSON, REST Methods
   - [x] [URL and URI](https://vrgl.ir/CI2gH)
   - [ ] HTTP Status Code
   - [ ] Authentication
-
-  - [ ] Desgin REST FULL API titorial ???
-  - [ ] an introduction on URL/URI (host, method, route, path, arguman)
+  - [ ] Desgin REST FULL API titorial
+  - [ ] URL Arguments(host, method, route, path, arguman), Routs, Header, Body
   - [ ] Methods (OPTION, GET, PUT, POST, DELETE)
-  - [ ] Routs
-  - [ ] URL Argumants
-  - [ ] Header
-  - [ ] Body
-  - [ ] HTTP Status codes
-  - [ ] Authentication
 
-### Test REST APIs
+
+## Test REST APIs
   - [ ] Testing API with CURL, Postman (or similar one), Ngrok
   - [ ] Sample API Request
   - [ ] Mock server
@@ -82,4 +73,3 @@
     - [ ] Implement API Routing         <== Router
     - [ ] Implement controllers         <== Controller
     - [ ] Implement Dashboard/view/GUI  <== View
-
